@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Presensi Karyawan</title>
+</head>
+<body>
+    <section>
+        <form action="/">
+            <label for="cari">Masukkan NIP:</label>
+            <input type="text" name="cari" id="cari">
+            <button type="submit">Cari</button>
+        </form>
+    </section>
+    {% match pegawai %}
+        {% when Some with (pegawai) %}
+        <p> Nama: {{ pegawai.nama }} </p>
+        <p> Alamat: {{ pegawai.alamat }} </p>
+        <p> Tanggal Lahir: {{ pegawai.tanggal_lahir }} </p>
+        <p> Divisi: {{ pegawai.tanggal_lahir }} </p>
+        {% else %}
+    {% endmatch %}
+</body>
+</html>
